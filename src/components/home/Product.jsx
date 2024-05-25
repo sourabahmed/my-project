@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 
 
-function AllProducts({product}) {
+function Product({product}) {
     const {name, id, description, price, imageUrl} = product;
   return (
     // <div>Name: {name}</div>
@@ -11,7 +12,7 @@ function AllProducts({product}) {
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-        <button className="btn btn-primary">Buy Now</button>
+        <Link to={`/products/${id}`}>See details</Link>
         </div>
     </div>
     </div>
@@ -19,4 +20,4 @@ function AllProducts({product}) {
   )
 }
 
-export default AllProducts
+export default Product;

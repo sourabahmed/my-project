@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoutes";
 import ErrorPage from "../components/shared/ErrorPage";
+import ProductsDetails from "../pages/ProductsDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,12 @@ const router = createBrowserRouter([
         {
             index: true,
             element: <Home/>
+        },
+        {
+            path: "/products/:id",
+            element: <ProductsDetails />,
+            loader: ({ params }) =>
+              fetch(`http://localhost:3000/products/${params.id}`),
         },
         {
             path: "about",
