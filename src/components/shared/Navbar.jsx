@@ -22,7 +22,7 @@ function Navbar() {
         {!user? " ":<li><Link to={"/dashboard"}>Dashboard</Link></li>}
       </ul>
     </div>
-    <Link to={"/"} className="btn btn-ghost text-xl">My App</Link>
+    <Link to={"/"} className="btn btn-ghost text-xl">My Project</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

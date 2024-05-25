@@ -1,5 +1,5 @@
 import Banner from "../components/home/Banner"
-import Products from "./Products"
+import Products from "../components/home/Products"
 
 function Home() {
   return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AllProducts from "../components/home/AllProducts";
+import AllProducts from "./AllProducts";
 
 function Products() {
   const [products, setProducts] = useState();
@@ -13,7 +13,12 @@ function Products() {
   console.log(products)
   return (
     <>
+      <div>
+        <h1 className="text-4xl text-center bold p-4">Products</h1>
+        <div className="flex flex-wrap justify-center gap-4">
       {products?.map((product) => <AllProducts product={product} key={product.id}/>)}
+      </div>
+      </div>
     </>
   )
 }
