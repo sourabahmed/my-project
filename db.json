@@ -237,25 +237,26 @@
       "id": "cc",
       "title": "dd",
       "brand": "ddd",
-      "price": "4",
+      "price": "254626",
       "description": "df",
-      "image_url": "ccc"
+      "image_url": "ccc",
+      "imageUrl": ""
     },
     {
-      "id": "12",
-      "title": "sdfsd",
+      "id": "",
+      "name": "",
       "brand": "",
-      "price": "55555",
-      "description": "sdfgdlksgpjgdfg",
-      "image_url": "sdfdsfd"
+      "price": "",
+      "description": "",
+      "imageUrl": ""
     },
     {
-      "id": "55",
-      "name": "sdfds",
-      "brand": "dsfds",
-      "price": "444",
-      "description": "sdfdsssssssssssss",
-      "imageUrl": "dsdd"
+      "id": "",
+      "name": "",
+      "brand": "",
+      "price": "",
+      "description": "",
+      "imageUrl": ""
     }
   ]
 }

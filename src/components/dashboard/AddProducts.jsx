@@ -27,7 +27,7 @@ const AddProducts = () => {
     };
   
     return (
-      <div>
+      <div className="p-10">
         <h1 className="text-5xl font-bold text-center">Add a Product</h1>
   
         <div className="my-16">
@@ -38,6 +38,7 @@ const AddProducts = () => {
                 type="text"
                 name="id"
                 placeholder="ID"
+                required
               />
             </div>
             <div className="mt-2">
@@ -46,6 +47,7 @@ const AddProducts = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
+                required
               />
             </div>
             <div className="mt-2">
@@ -54,6 +56,7 @@ const AddProducts = () => {
                 type="text"
                 name="brand"
                 placeholder="Brand"
+                required
               />
             </div>
             <div className="mt-2">
@@ -62,6 +65,7 @@ const AddProducts = () => {
                 type="text"
                 name="price"
                 placeholder="Price"
+                required
               />
             </div>
             <div className="mt-2">
@@ -70,6 +74,7 @@ const AddProducts = () => {
                 type="text"
                 name="description"
                 placeholder="Description"
+                required
               />
             </div>
             <div className="mt-2">
@@ -78,6 +83,7 @@ const AddProducts = () => {
                 type="text"
                 name="imageUrl"
                 placeholder="Image URL"
+                required
               />
             </div>
             <div className="mt-2 flex justify-center items-center">

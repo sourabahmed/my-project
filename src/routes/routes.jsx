@@ -14,6 +14,7 @@ import ErrorPage from "../components/shared/ErrorPage";
 import ProductsDetails from "../pages/ProductsDetails";
 import AllProducts from "../components/dashboard/AllProducts";
 import AddProducts from "../components/dashboard/AddProducts";
+import EditProducts from "../components/dashboard/EditProducts";
 
 const router = createBrowserRouter([
   {
@@ -78,7 +79,17 @@ const router = createBrowserRouter([
                 <AddProducts />
               </PrivateRoute>
             ),
-          },
+        },
+        {
+          path: "all-products/edit/:id",
+          element: (
+            <PrivateRoute>
+              <EditProducts />
+            </PrivateRoute>
+          ),
+          loader: ({ params }) =>
+            fetch(`http://localhost:3000/products/${params.id}`),
+        },
     ]
   },
 ]);
