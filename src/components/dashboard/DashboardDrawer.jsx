@@ -22,6 +22,8 @@ function DashboardDrawer() {
           <li><Link to={"/"}>Home</Link></li>
       <li><Link to={"/dashboard/Other"}>Other</Link></li>
       <li><Link to={"/dashboard/Other2"}>Other2</Link></li>
+      <li><Link to={"/dashboard/all-products"}>All products</Link></li>
+      <li><Link to={"/dashboard/add-products"}>Add products</Link></li>
         </ul>
       </div>
     </div>
@@ -35,6 +37,8 @@ function DashboardDrawer() {
       <li><Link to={"/"}>Home</Link></li>
       <li><Link to={"/dashboard/Other"}>Other</Link></li>
       <li><Link to={"/dashboard/Other2"}>Other2</Link></li>
+      <li><Link to={"/dashboard/all-products"}>All products</Link></li>
+      <li><Link to={"/dashboard/add-products"}>Add products</Link></li>
     </ul>
   </div>
 </div>

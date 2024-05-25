@@ -1,13 +1,22 @@
 {
-    "products": [
+  "products": [
     {
       "id": "1",
       "name": "Air Max 270",
       "brand": "Nike",
-      "price": 150.00,
+      "price": 150,
       "currency": "USD",
-      "sizes": ["7", "8", "9", "10", "11"],
-      "colors": ["Black", "White"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "colors": [
+        "Black",
+        "White"
+      ],
       "stock": 50,
       "description": "The Nike Air Max 270 features a large Air unit for maximum cushioning.",
       "category": "Running",
@@ -17,10 +26,20 @@
       "id": "2",
       "name": "UltraBoost 21",
       "brand": "Adidas",
-      "price": 180.00,
+      "price": 180,
       "currency": "USD",
-      "sizes": ["6", "7", "8", "9", "10", "11"],
-      "colors": ["Black", "Blue"],
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "colors": [
+        "Black",
+        "Blue"
+      ],
       "stock": 30,
       "description": "Experience the ultimate in running comfort with the Adidas UltraBoost 21.",
       "category": "Running",
@@ -30,10 +49,22 @@
       "id": "3",
       "name": "Classic Slip-On",
       "brand": "Vans",
-      "price": 50.00,
+      "price": 50,
       "currency": "USD",
-      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
-      "colors": ["Checkerboard", "Black", "White"],
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "colors": [
+        "Checkerboard",
+        "Black",
+        "White"
+      ],
       "stock": 75,
       "description": "A timeless classic, the Vans Slip-On is perfect for everyday wear.",
       "category": "Casual",
@@ -43,10 +74,20 @@
       "id": "4",
       "name": "Gel-Kayano 27",
       "brand": "ASICS",
-      "price": 160.00,
+      "price": 160,
       "currency": "USD",
-      "sizes": ["7", "8", "9", "10", "11", "12"],
-      "colors": ["Gray", "Blue"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "colors": [
+        "Gray",
+        "Blue"
+      ],
       "stock": 40,
       "description": "Supportive and comfortable, the ASICS Gel-Kayano 27 is great for long runs.",
       "category": "Running",
@@ -56,10 +97,22 @@
       "id": "5",
       "name": "Chuck Taylor All Star",
       "brand": "Converse",
-      "price": 55.00,
+      "price": 55,
       "currency": "USD",
-      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
-      "colors": ["Black", "White", "Red"],
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Red"
+      ],
       "stock": 60,
       "description": "An iconic shoe with a classic design, suitable for everyday wear.",
       "category": "Casual",
@@ -69,10 +122,20 @@
       "id": "6",
       "name": "Air Jordan 1",
       "brand": "Jordan",
-      "price": 170.00,
+      "price": 170,
       "currency": "USD",
-      "sizes": ["7", "8", "9", "10", "11"],
-      "colors": ["Red", "Black", "White"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "colors": [
+        "Red",
+        "Black",
+        "White"
+      ],
       "stock": 20,
       "description": "The Air Jordan 1 combines heritage style with modern comfort.",
       "category": "Basketball",
@@ -82,10 +145,19 @@
       "id": "7",
       "name": "Wave Rider 24",
       "brand": "Mizuno",
-      "price": 130.00,
+      "price": 130,
       "currency": "USD",
-      "sizes": ["7", "8", "9", "10", "11"],
-      "colors": ["White", "Blue"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "colors": [
+        "White",
+        "Blue"
+      ],
       "stock": 35,
       "description": "Smooth and responsive, the Mizuno Wave Rider 24 is ideal for neutral runners.",
       "category": "Running",
@@ -95,10 +167,21 @@
       "id": "8",
       "name": "Huarache",
       "brand": "Nike",
-      "price": 120.00,
+      "price": 120,
       "currency": "USD",
-      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
-      "colors": ["Black", "White"],
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "colors": [
+        "Black",
+        "White"
+      ],
       "stock": 45,
       "description": "The Nike Huarache offers a snug, sock-like fit and classic style.",
       "category": "Casual",
@@ -108,10 +191,21 @@
       "id": "9",
       "name": "Superstar",
       "brand": "Adidas",
-      "price": 85.00,
+      "price": 85,
       "currency": "USD",
-      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
-      "colors": ["White", "Black"],
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "colors": [
+        "White",
+        "Black"
+      ],
       "stock": 55,
       "description": "The Adidas Superstar is a classic shell-toe shoe that's stood the test of time.",
       "category": "Casual",
@@ -121,14 +215,47 @@
       "id": "10",
       "name": "FuelCell Rebel",
       "brand": "New Balance",
-      "price": 130.00,
+      "price": 130,
       "currency": "USD",
-      "sizes": ["7", "8", "9", "10", "11"],
-      "colors": ["Yellow", "Black"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "colors": [
+        "Yellow",
+        "Black"
+      ],
       "stock": 25,
       "description": "The New Balance FuelCell Rebel provides a fast, lightweight ride.",
       "category": "Running",
       "imageUrl": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "cc",
+      "title": "dd",
+      "brand": "ddd",
+      "price": "4",
+      "description": "df",
+      "image_url": "ccc"
+    },
+    {
+      "id": "12",
+      "title": "sdfsd",
+      "brand": "",
+      "price": "55555",
+      "description": "sdfgdlksgpjgdfg",
+      "image_url": "sdfdsfd"
+    },
+    {
+      "id": "55",
+      "name": "sdfds",
+      "brand": "dsfds",
+      "price": "444",
+      "description": "sdfdsssssssssssss",
+      "imageUrl": "dsdd"
     }
   ]
 }

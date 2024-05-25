@@ -12,6 +12,8 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoutes";
 import ErrorPage from "../components/shared/ErrorPage";
 import ProductsDetails from "../pages/ProductsDetails";
+import AllProducts from "../components/dashboard/AllProducts";
+import AddProducts from "../components/dashboard/AddProducts";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +61,24 @@ const router = createBrowserRouter([
         {
             path: "other2",
             element: <PrivateRoute> <DashboradOther2 /></PrivateRoute> 
-        }
+        },
+        {
+            path: "all-products",
+            element: (
+                <PrivateRoute>
+                  <AllProducts />
+                </PrivateRoute>
+              ),
+            loader: () => fetch(`http://localhost:3000/products/`),
+        },
+        {
+            path: "add-products",
+            element: (
+              <PrivateRoute>
+                <AddProducts />
+              </PrivateRoute>
+            ),
+          },
     ]
   },
 ]);
