@@ -4,10 +4,12 @@ import useAuth from "../../hooks/useAuth";
 
 function Navbar() {
   const {logout, user} = useAuth();
+
   const handleLogout = (e) => {
     e.preventDefault();
     logout();
   }
+
   return (
     <>
      <div className="navbar bg-base-100">

@@ -24,7 +24,7 @@ const EditProducts = () => {
 
     const data = { id, name, brand, price, description, imageUrl };
 
-    await fetch(`http://localhost:3000/products/${products.id}`, {
+      await fetch(`http://localhost:3000/products/${products.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

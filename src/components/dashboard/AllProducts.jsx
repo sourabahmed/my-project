@@ -40,13 +40,13 @@ const AllProducts = () => {
   }, []);
 
   const handleDeleteProduct = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    setProducts(products.filter((product) => product.id !== id || product.id === ""));
   };
 
   return (
     <div className="flex justify-center flex-wrap" >
-      <h1 className="text-5xl font-bold text-center">All Produts</h1>
-      <div className="my-16 flex flex-wrap gap-4">
+      <h1 className="text-4xl m-5 font-bold text-center">All Produts</h1>
+      <div className="flex justify-center flex-wrap gap-4">
         {products.map((product) => (
           <AllProduct
             key={product.id}

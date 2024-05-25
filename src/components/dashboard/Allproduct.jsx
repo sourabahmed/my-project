@@ -22,9 +22,9 @@ const AllProduct = ({ product, onDelete }) => {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <h3 className="text-xl font-semibold">{brand}</h3>
-        <h3 className="text-xl font-semibold">{price}</h3>
-        <p>{description}</p>
-        <div className="card-actions justify-end">
+        <h3 className="text-xl font-semibold">$: {price}</h3>
+        <p>{description.slice(0, 40)}</p>
+        <div className="card-actions justify-center">
           <button className="btn bg-indigo-500 text-white">
             <Link to={`/products/${id}`}>See details</Link>
           </button>
