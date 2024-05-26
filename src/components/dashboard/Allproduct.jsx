@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AllProduct = ({ product, onDelete }) => {
   const { id, name, brand, price, description, imageUrl } = product;
@@ -11,8 +12,18 @@ const AllProduct = ({ product, onDelete }) => {
       .then((data) => {
         console.log(data);
         onDelete(id);
+        if(id){
+          toast.success('Product deleted successfully!');
+        }
       });
   };
+
+  const confirmDelete = () => {
+    const answer = window.confirm("Are you sure delete Product?")
+    if(answer){
+      handleDelete()
+    }
+  }
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl flex flex-wrap justify-center gap-4">
@@ -31,7 +42,7 @@ const AllProduct = ({ product, onDelete }) => {
           <button className="btn bg-green-600 text-white">
             <Link to={`edit/${id}`}>Edit</Link>
           </button>
-          <button onClick={handleDelete} className="btn bg-red-500 text-white">
+          <button onClick={confirmDelete} className="btn bg-red-500 text-white">
             Delete
           </button>
         </div>

@@ -9,7 +9,7 @@ function Dashboard() {
     {/* head */}
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Image & Name</th>
         <th>Email</th>
         <th>Phone</th>
         <th></th>

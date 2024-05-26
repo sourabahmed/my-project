@@ -1,7 +1,10 @@
+import { toast } from "react-toastify";
+import Toast from "../shared/Toast";
+
 const AddProducts = () => {
+
     const handleSubmit = async (e) => {
       e.preventDefault();
-  
       const form = e.target;
       const id = form.id.value;
       const name = form.name.value;
@@ -11,7 +14,13 @@ const AddProducts = () => {
       const imageUrl = form.imageUrl.value;
   
       const data = { id, name, brand, price, description, imageUrl };
-  
+      confirmAdd(data, form)
+
+    };
+
+    const confirmAdd = async (data, form) => {
+      const answer = window.confirm("Are you sure you want ot add Product");
+      if(answer) {
         await fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
@@ -23,8 +32,13 @@ const AddProducts = () => {
         .then((data) => {
           console.log(data);
           form.reset();
+          if(data.id){
+            toast.success('Product added successfully!');
+          }
         });
-    };
+      }
+    }
+
   
     return (
       <div className="p-10">

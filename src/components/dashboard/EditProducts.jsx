@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Toast from "../shared/Toast";
+import { toast } from "react-toastify";
+
 
 const EditProducts = () => {
   const products = useLoaderData();
@@ -23,7 +26,14 @@ const EditProducts = () => {
     const imageUrl = form.imageUrl.value;
 
     const data = { id, name, brand, price, description, imageUrl };
+    confirmEdit( data)
 
+  };
+
+  const confirmEdit = async(data) => {
+    const answer = window.confirm("Are you sure to Edit this Product?");
+    if(answer){
+      
       await fetch(`http://localhost:3000/products/${products.id}`, {
       method: "PATCH",
       headers: {
@@ -31,9 +41,15 @@ const EditProducts = () => {
       },
       body: JSON.stringify(data),
     })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  };
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.id);
+      if(id){
+        toast.success('Product edited successfully!');
+      }
+    });
+    }
+  }
 
   return (
     <div className="p-10">
