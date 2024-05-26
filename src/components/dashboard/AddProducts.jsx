@@ -48,7 +48,7 @@ const AddProducts = () => {
           <form onSubmit={handleSubmit}>
           <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="id"
                 placeholder="ID"
@@ -57,7 +57,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="name"
                 placeholder="Name"
@@ -66,7 +66,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="brand"
                 placeholder="Brand"
@@ -75,7 +75,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="price"
                 placeholder="Price"
@@ -84,7 +84,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="description"
                 placeholder="Description"
@@ -93,7 +93,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2">
               <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+                className="input input-bordered input-accent w-full"
                 type="text"
                 name="imageUrl"
                 placeholder="Image URL"
@@ -102,7 +102,7 @@ const AddProducts = () => {
             </div>
             <div className="mt-2 flex justify-center items-center">
               <input
-                className="btn mt-4 w-full bg-red-500 text-white p-4"
+                className="input input-bordered input-accent w-full btn btn-active btn-accent"
                 type="submit"
                 value="Add product"
               />

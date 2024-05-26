@@ -53,13 +53,13 @@ const EditProducts = () => {
 
   return (
     <div className="p-10">
-      <h1 className="text-5xl font-bold text-center">Edit Product</h1>
+      <h1 className="text-3xl font-bold text-center">Edit Product</h1>
 
       <div className="my-16">
         <form onSubmit={handleSubmit}>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="input input-bordered input-accent w-full "
               type="text"
               name="title"
               placeholder="Title"
@@ -69,7 +69,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="input input-bordered input-accent w-full "
               type="text"
               name="brand"
               placeholder="Brand"
@@ -79,8 +79,8 @@ const EditProducts = () => {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="number"
+              className="input input-bordered input-accent w-full "
+              type="text"
               name="price"
               placeholder="Price"
               value={price}
@@ -89,7 +89,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="input input-bordered input-accent w-full "
               type="text"
               name="description"
               placeholder="Description"
@@ -99,7 +99,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="input input-bordered input-accent w-full "
               type="text"
               name="imageUrl"
               placeholder="Image URL"
@@ -109,7 +109,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="input input-bordered input-accent w-full "
               type="text"
               name="id"
               placeholder="ID"
@@ -119,7 +119,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2 flex justify-center items-center">
             <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4"
+              className="input input-bordered input-accent w-full btn btn-active btn-accent "
               type="submit"
               value="Edit product"
             />
