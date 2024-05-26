@@ -56,14 +56,6 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
         {
-            path: "other",
-            element:<PrivateRoute><DashboardOther /></PrivateRoute> 
-        },
-        {
-            path: "other2",
-            element: <PrivateRoute> <DashboradOther2 /></PrivateRoute> 
-        },
-        {
             path: "all-products",
             element: (
                 <PrivateRoute>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Profile from "./Profile";
 
 
 function Navbar() {
@@ -35,8 +36,8 @@ function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    {!user?<Link className="btn" to={"/login"}>Login</Link>:<Link onClick={handleLogout} className="btn ms-3 btn-secondary" to={"/login"}>Logout</Link>}
-    {/* <Link onClick={handleLogout} className="btn ms-3 btn-secondary" to={"/login"}>Logout</Link> */}
+    <Profile />
+    <Link onClick={handleLogout} className="btn ms-3 btn-secondary" to={"/login"}>Logout</Link>
   </div>
 </div>
     </>

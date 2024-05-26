@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Profile from "../shared/Profile"
 
 
 function DashboardDrawer() {
@@ -20,10 +21,9 @@ function DashboardDrawer() {
         <ul className="menu menu-horizontal">
           {/* Navbar menu content here */}
           <li><Link to={"/"}>Home</Link></li>
-      <li><Link to={"/dashboard/Other"}>Other</Link></li>
-      <li><Link to={"/dashboard/Other2"}>Other2</Link></li>
       <li><Link to={"/dashboard/all-products"}>All products</Link></li>
       <li><Link to={"/dashboard/add-products"}>Add products</Link></li>
+      <Profile />
         </ul>
       </div>
     </div>
@@ -35,10 +35,9 @@ function DashboardDrawer() {
     <ul className="menu p-4 w-80 min-h-full bg-base-200">
       {/* Sidebar content here */}
       <li><Link to={"/"}>Home</Link></li>
-      <li><Link to={"/dashboard/Other"}>Other</Link></li>
-      <li><Link to={"/dashboard/Other2"}>Other2</Link></li>
       <li><Link to={"/dashboard/all-products"}>All products</Link></li>
       <li><Link to={"/dashboard/add-products"}>Add products</Link></li>
+      <Profile />
     </ul>
   </div>
 </div>
