@@ -42,7 +42,7 @@ const AddProducts = () => {
   
     return (
       <div className="p-10">
-        <h1 className="text-5xl font-bold text-center">Add a Product</h1>
+        <h1 className="text-3xl font-bold text-center">Add a Product</h1>
   
         <div className="my-16">
           <form onSubmit={handleSubmit}>
