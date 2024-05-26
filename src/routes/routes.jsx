@@ -15,6 +15,7 @@ import ProductsDetails from "../pages/ProductsDetails";
 import AllProducts from "../components/dashboard/AllProducts";
 import AddProducts from "../components/dashboard/AddProducts";
 import EditProducts from "../components/dashboard/EditProducts";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     errorElement: <ErrorPage />,
     children: [
+        {
+            index: true,
+            element: <Dashboard/>
+        },
         {
             path: "all-products",
             element: (

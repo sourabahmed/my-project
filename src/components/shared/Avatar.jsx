@@ -1,16 +1,14 @@
-import Profile from "./Profile";
+import useAuth from "../../hooks/useAuth";
 
 
 function Avatar() {
-    const showProfile = (e) => {
-        e.preventDefault();
-    }
+    const {user} = useAuth();
   return (
     <div>
         
         <div className="avatar">
   <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src={user.photoURL} />
   </div>
 </div>
     
