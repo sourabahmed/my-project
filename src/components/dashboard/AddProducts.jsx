@@ -6,14 +6,13 @@ const AddProducts = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       const form = e.target;
-      const id = form.id.value;
       const name = form.name.value;
       const brand = form.brand.value;
       const price = form.price.value;
       const description = form.description.value;
       const imageUrl = form.imageUrl.value;
   
-      const data = { id, name, brand, price, description, imageUrl };
+      const data = { name, brand, price, description, imageUrl };
       confirmAdd(data, form)
 
     };
@@ -21,7 +20,7 @@ const AddProducts = () => {
     const confirmAdd = async (data, form) => {
       const answer = window.confirm("Are you sure you want ot add Product");
       if(answer) {
-        await fetch("http://localhost:3000/products", {
+        await fetch("http://localhost:5000/products", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -32,7 +31,7 @@ const AddProducts = () => {
         .then((data) => {
           console.log(data);
           form.reset();
-          if(data.id){
+          if(data){
             toast.success('Product added successfully!');
           }
         });
@@ -46,15 +45,6 @@ const AddProducts = () => {
   
         <div className="my-16">
           <form onSubmit={handleSubmit}>
-          <div className="mt-2">
-              <input
-                className="input input-bordered input-accent w-full"
-                type="text"
-                name="id"
-                placeholder="ID"
-                required
-              />
-            </div>
             <div className="mt-2">
               <input
                 className="input input-bordered input-accent w-full"
