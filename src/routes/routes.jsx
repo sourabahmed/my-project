@@ -5,8 +5,6 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import DashboardLayout from "../layouts/DashboardLayout";
-import DashboardOther from "../components/dashboard/DashboardOther";
-import DashboradOther2 from "../components/dashboard/DashboradOther2";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoutes";
@@ -31,7 +29,7 @@ const router = createBrowserRouter([
             path: "/products/:id",
             element: <ProductsDetails />,
             loader: ({ params }) =>
-              fetch(`http://localhost:3000/products/${params.id}`),
+              fetch(`http://localhost:5000/products/${params.id}`),
         },
         {
             path: "about",
@@ -66,8 +64,7 @@ const router = createBrowserRouter([
                 <PrivateRoute>
                   <AllProducts />
                 </PrivateRoute>
-              ),
-            loader: () => fetch(`http://localhost:3000/products/`),
+              )
         },
         {
             path: "add-products",
@@ -85,7 +82,7 @@ const router = createBrowserRouter([
             </PrivateRoute>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:3000/products/${params.id}`),
+            fetch(`http://localhost:5000/products/${params.id}`),
         },
     ]
   },

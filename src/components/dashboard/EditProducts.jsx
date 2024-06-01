@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import Toast from "../shared/Toast";
 import { toast } from "react-toastify";
 
 
 const EditProducts = () => {
   const products = useLoaderData();
+  console.log(products._id)
 
-  const [title, setName] = useState(products.name);
+  const [name, setName] = useState(products.name);
   const [price, setPrice] = useState(products.price);
   const [brand, setBrand] = useState(products.brand);
-  const [id, setId] = useState(products.id);
   const [description, setDescription] = useState(products.description);
   const [imageUrl, setImageUrl] = useState(products.imageUrl);
 
@@ -18,14 +17,13 @@ const EditProducts = () => {
     e.preventDefault();
 
     const form = e.target;
-    const id = form.id.value;
     const name = form.name.value;
     const brand = form.brand.value;
     const price = form.price.value;
     const description = form.description.value;
     const imageUrl = form.imageUrl.value;
 
-    const data = { id, name, brand, price, description, imageUrl };
+    const data = { name, brand, price, description, imageUrl };
     confirmEdit( data)
 
   };
@@ -34,7 +32,7 @@ const EditProducts = () => {
     const answer = window.confirm("Are you sure to Edit this Product?");
     if(answer){
       
-      await fetch(`http://localhost:3000/products/${products.id}`, {
+      await fetch(`http://localhost:5000/products/${products._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -43,8 +41,8 @@ const EditProducts = () => {
     })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.id);
-      if(id){
+      console.log(data);
+      if(data){
         toast.success('Product edited successfully!');
       }
     });
@@ -61,9 +59,9 @@ const EditProducts = () => {
             <input
               className="input input-bordered input-accent w-full "
               type="text"
-              name="title"
-              placeholder="Title"
-              value={title}
+              name="name"
+              placeholder="name"
+              value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -105,16 +103,6 @@ const EditProducts = () => {
               placeholder="Image URL"
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="input input-bordered input-accent w-full "
-              type="text"
-              name="id"
-              placeholder="ID"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
             />
           </div>
           <div className="mt-2 flex justify-center items-center">

@@ -34,13 +34,13 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products/")
+    fetch("http://localhost:5000/products/")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
-  const handleDeleteProduct = (id) => {
-    setProducts(products.filter((product) => product.id !== id || product.id === ""));
+  const handleDeleteProduct = (_id) => {
+    setProducts(products.filter((product) => product._id !== _id || product._id === ""));
   };
 
   return (
@@ -49,7 +49,7 @@ const AllProducts = () => {
       <div className="flex justify-center flex-wrap gap-4">
         {products.map((product) => (
           <AllProduct
-            key={product.id}
+            key={product._id}
             product={product}
             onDelete={handleDeleteProduct}
           />

@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AllProduct = ({ product, onDelete }) => {
-  const { id, name, brand, price, description, imageUrl } = product;
+  const { _id, name, brand, price, description, imageUrl } = product;
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3000/products/${id}`, {
+    await fetch(`http://localhost:5000/products/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        onDelete(id);
-        if(id){
+      .then(() => {
+        onDelete(_id);
+        if(_id){
           toast.success('Product deleted successfully!');
         }
       });
@@ -37,10 +36,10 @@ const AllProduct = ({ product, onDelete }) => {
         <p>{description.slice(0, 40)}</p>
         <div className="card-actions justify-center">
           <button className="btn bg-indigo-500 text-white">
-            <Link to={`/products/${id}`}>See details</Link>
+            <Link to={`/products/${_id}`}>See details</Link>
           </button>
           <button className="btn bg-green-600 text-white">
-            <Link to={`edit/${id}`}>Edit</Link>
+            <Link to={`edit/${_id}`}>Edit</Link>
           </button>
           <button onClick={confirmDelete} className="btn bg-red-500 text-white">
             Delete

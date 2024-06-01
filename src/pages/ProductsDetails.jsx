@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 function ProductsDetails() {
     const products = useLoaderData();
+    console.log(products)
 
   const {description, imageUrl, price, name } = products;
   return (
@@ -11,6 +12,7 @@ function ProductsDetails() {
     <figure><img src={imageUrl} alt="Shoes" /></figure>
     <div className="card-body">
         <h2 className="card-title">{name}</h2>
+        <p>{price}</p>
         <p>{description}</p>
     </div>
     </div>
