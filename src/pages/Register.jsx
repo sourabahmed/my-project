@@ -34,8 +34,24 @@ const Register = () => {
 
   const hanldleGoogleLogin = (e) => {
     e.preventDefault();
-    googleLogin();
-  }
+    googleLogin().then((data) => {
+      if(data?.user?.email){
+        const userInfo = {
+          name: data?.user?.displayName,
+          email: data?.user?.email,
+        }
+        fetch("http://localhost:5000/user", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: JSON.stringify(userInfo )
+        })
+        .then((res) => res.json)
+        .then((data) => console.log(data))
+      }
+    });
+}
 
   return (
     <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
